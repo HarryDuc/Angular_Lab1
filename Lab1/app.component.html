@@ -1,0 +1,47 @@
+  <h1>B2</h1>
+  <h3 class="header">{{name}}</h3>
+  <p>Ky niem {{years}} ngay thanh lap truong.</p>
+  <h1>B3</h1>
+  <input type="checkbox" [(ngModel)]="read">
+  <input type="date" [readOnly]="read">
+  <h1>B4</h1>
+  <button (click)="toggleDisabled()">Click to Disabled</button>
+  <button [disabled]="disabled" (click)="myClick()">Message</button>
+  <h1>B5, B6</h1>
+  <input type="text" [(ngModel)]="a">
+  <input type="text" [(ngModel)]="b">
+  <select name="" id="" [(ngModel)]="phepTinh" (click)="Calculator()">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="Max">Max</option>
+  </select>
+  <p>Ket qua: {{kq}}</p>
+  <h1>B7</h1>
+  <input type="text" [(ngModel)]="a1">
+  <input type="text" [(ngModel)]="b1">
+  <input type="text" [(ngModel)]="c1">
+  <p>Max 1 in 3: {{max()}}</p>
+  <h1>B8</h1>
+  <input type="text" [(ngModel)]="a2">
+  <input type="text" [(ngModel)]="b2">
+  <input type="text" [(ngModel)]="c2">
+  <p>Ket qua: {{sapxep()}}</p>
+
+  <h1>B9, B10, B11</h1>
+  <input type="radio" name="bai" id="" [(ngModel)]="bai" value="1">Bac 1
+  <input type="radio" name="bai" id="" [(ngModel)]="bai" value="2">Bac 2
+  @if (bai==1) {
+      <!-- phuong trinh bac nhat -->
+   <input type="number" name="" id="" [(ngModel)]="x">
+   <input type="number" name="" id="" [(ngModel)]="y">
+   <p>Nghiem x: {{ptb1()}}</p>
+  }
+  @if (bai==2) {
+      <!--  Phuong trinh bac hai -->
+   <input type="number" name="" id="" [(ngModel)]="x1">
+   <input type="number" name="" id="" [(ngModel)]="y2">
+   <input type="number" name="" id="" [(ngModel)]="z">
+   <p>Nghiem x: {{ptb2()}}</p>
+  }
